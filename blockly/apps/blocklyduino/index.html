@@ -7,6 +7,7 @@
   <script type="text/javascript" src="../../arduino_compressed.js"></script>
   <script type="text/javascript" src="../../msg/js/en.js"></script>
   <script type="text/javascript" src="Blob.js"></script>
+  <script type="text/javascript" src="spin.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
   <script type="text/javascript" src="blockly_helper.js"></script>
   <script>
@@ -297,6 +298,18 @@ function init() {
     </tr>
     <tr>
       <td height="99%" id="content_area">
+      <!-- Old code for uploading to Arduino
+      <td height="99%">
+        <iframe id="content_blocks" src="frame.html"></iframe>
+        <div id="content_arduino">
+          <button type="button" onclick="uploadClick()">Upload</button>
+          <button type="button" onclick="resetClick()">Reset</button>
+          <textarea id="textarea_arduino" readonly></textarea>
+        </div>
+        <div id="content_xml">
+          <textarea id="textarea_xml" readonly></textarea>
+        </div>
+        -->
       </td>
     </tr>
   </table>
