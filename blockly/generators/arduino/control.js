@@ -36,10 +36,10 @@ Blockly.Arduino.controls_for = function() {
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
   var argument1 = Blockly.Arduino.valueToCode(this, 'TO',
       Blockly.Arduino.ORDER_ASSIGNMENT) || '0';
-  var branch = Blockly.Arduino.statementToCode(this, 'DO');
+  var branch0 = Blockly.Arduino.statementToCode(this, 'DO');
   if (Blockly.Arduino.INFINITE_LOOP_TRAP) {
-    branch = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
-        '\'' + this.id + '\'') + branch;
+    branch0 = Blockly.Arduino.INFINITE_LOOP_TRAP.replace(/%1/g,
+        '\'' + this.id + '\'') + branch0;
   }
   var code;
   if (argument0.match(/^-?\d+(\.\d+)?$/) &&
@@ -49,7 +49,7 @@ Blockly.Arduino.controls_for = function() {
     code = 'for (' + variable0 + ' = ' + argument0 + '; ' +
         variable0 + (up ? ' <= ' : ' >= ') + argument1 + '; ' +
         variable0 + (up ? '++' : '--') + ') {\n' +
-        branch + '}\n';
+        branch0 + '}\n';
   } else {
     code = '';
     // Cache non-trivial values to variables to prevent repeated look-ups.
